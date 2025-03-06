@@ -5,7 +5,7 @@ let jogos = [];
 
 //Rota pra teste 
 jogosRoutes.get("/", (req, res) => {
-    return res.status(200).json({ message: "Bem-vindo ao sistema de gerenciamento de jogos!" });
+    return res.status(200).json({ message: "Bem-vindo ao sistema de gerenciamento de jogos da sua biblioteca!" });
 });
 
 //listar os jogos
