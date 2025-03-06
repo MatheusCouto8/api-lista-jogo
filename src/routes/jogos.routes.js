@@ -26,6 +26,11 @@ jogosRoutes.post("/items", (req, res) => {
     });
 });
 
-
-
+// Remove um jogo pelo id
+jogosRoutes.delete("/items/:id", (req, res) => {
+    const { id } = req.params;
+  
+    // Busca um jogo pelo id no array de jogos
+    const jogo = jogos.find((game) => game.id == id);
+    
 export default jogosRoutes;
