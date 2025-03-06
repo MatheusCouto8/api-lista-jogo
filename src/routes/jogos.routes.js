@@ -45,5 +45,10 @@ jogosRoutes.delete("/items/:id", (req, res) => {
 // Remove o jogo do array de jogos
 jogos = jogos.filter((jogo) => jogo.id != id);
 
+return res.status(200).json({
+    message: "Jogo removido com sucesso!",
+    jogo,
+  });
+});
 
 export default jogosRoutes;
