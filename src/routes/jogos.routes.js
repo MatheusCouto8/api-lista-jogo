@@ -42,4 +42,8 @@ jogosRoutes.delete("/items/:id", (req, res) => {
       .json({ message: `Jogo com id ${id} não encontrado!` });
   }
 
+// Remove o jogo do array de jogos
+jogos = jogos.filter((jogo) => jogo.id != id);
+
+
 export default jogosRoutes;
