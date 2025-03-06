@@ -30,7 +30,16 @@ jogosRoutes.post("/items", (req, res) => {
 jogosRoutes.delete("/items/:id", (req, res) => {
     const { id } = req.params;
   
-    // Busca um jogo pelo id no array de jogos
+// Busca um jogo pelo id no array de jogos
     const jogo = jogos.find((game) => game.id == id);
-    
+
+
+
+    // Verifica se o jogo foi encontrado
+  if (!jogo) {
+    return res
+      .status(404)
+      .json({ message: `Jogo com id ${id} não encontrado!` });
+  }
+
 export default jogosRoutes;
